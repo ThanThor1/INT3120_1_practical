@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.unit2_pathway2_practice_click_behavior",
+  "variantName": "debug",
+  "elements": []
+}
