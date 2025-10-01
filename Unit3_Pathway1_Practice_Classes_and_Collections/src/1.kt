@@ -39,8 +39,24 @@ fun main() {
     )
     //cau3
     val events = mutableListOf<Event>(event1, event2, event3, event4, event5, event6)
-
-
+//cau4
+    val shortEvents = mutableListOf<Event>()
+    for (event in events) {
+        if (event.durationInMinutes < 60) {
+            shortEvents.add(event)
+        }
+    }
+    println("You have ${shortEvents.size} short events.")
+    //cau 5
+    val grouped = events.groupBy { it.daypart }
+    grouped.forEach { (daypart, events) ->
+        println("$daypart: ${events.size} events")
+    }
+    //cau 6
+    println("Last event of the day: ${events.last().title}")
+    println("Duration of first event: ${events[0].durationOfEvent}")
 }
-
+//cau7
+val Event.durationOfEvent: String
+    get() = if (durationInMinutes < 60) "short" else "long"
 
