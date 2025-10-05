@@ -25,7 +25,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.lunchtray.model.OrderViewModel
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
@@ -45,6 +44,7 @@ import com.example.lunchtray.ui.SideDishMenuScreen
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.navigation.NavHostController
+import com.example.lunchtray.ui.OrderViewModel
 import com.example.lunchtray.ui.StartOrderScreen
 
 
@@ -102,7 +102,7 @@ fun LunchTrayApp() {
                         navController.navigate(Screen.SIDE_DISH.name)
                     },
                     onSelectionChanged = { item ->
-                        viewModel.updateSelectedEntree(item)
+                        viewModel.updateEntree(item)
                     }
                 )
             }
@@ -116,7 +116,7 @@ fun LunchTrayApp() {
                         navController.navigate(Screen.ACCOMPANIMENT.name)
                     },
                     onSelectionChanged = { item ->
-                        viewModel.updateSelectedSideDish(item)
+                        viewModel.updateSideDish(item)
                     }
                 )
             }
@@ -130,7 +130,7 @@ fun LunchTrayApp() {
                         navController.navigate(Screen.CHECKOUT.name)
                     },
                     onSelectionChanged = { item ->
-                        viewModel.updateSelectedAccompaniment(item)
+                        viewModel.updateAccompaniment(item)
                     }
                 )
             }

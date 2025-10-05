@@ -23,7 +23,6 @@ import com.example.lunchtray.model.MenuItem.AccompanimentItem
 import com.example.lunchtray.model.MenuItem.EntreeItem
 import com.example.lunchtray.model.MenuItem.SideDishItem
 import com.example.lunchtray.model.OrderUiState
-import com.example.lunchtray.model.OrderViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
