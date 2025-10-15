@@ -55,8 +55,14 @@ fun main() {
     //cau 6
     println("Last event of the day: ${events.last().title}")
     println("Duration of first event: ${events[0].durationOfEvent}")
+    
 }
 //cau7
 val Event.durationOfEvent: String
     get() = if (durationInMinutes < 60) "short" else "long"
 
+fun
+
+object : Object {
+    
+}
